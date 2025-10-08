@@ -1,8 +1,6 @@
 services:
   - type: web
     name: student-api-crud
-    env: php
+    env: docker
     plan: free
-    buildCommand: |
-      composer install
-    startCommand: php -S 0.0.0.0:$PORT -t public
+    dockerfilePath: ./Dockerfile
