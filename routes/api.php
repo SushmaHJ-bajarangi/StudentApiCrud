@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\StudentController;
+use App\Http\Controllers\Api\SkillController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,17 @@ Route::get('students/{id}',[StudentController::class, 'show']);
 Route::get('students/{id}/edit',[StudentController::class, 'edit']);
 Route::put('students/{id}/edit',[StudentController::class, 'update']);
 Route::delete('students/{id}/delete',[StudentController::class, 'destroy']);
+
+Route::get('skills',[SkillController::class, 'index']);
+Route::post('skills',[SkillController::class, 'store']);
+Route::get('skills/{id}',[SkillController::class, 'show']);
+Route::get('skills/{id}/edit',[SkillController::class, 'edit']);
+Route::put('skills/{id}/edit',[SkillController::class, 'update']);
+Route::delete('skills/{id}/delete',[SkillController::class, 'destroy']);
+
+//Route::apiResource('skills', SkillController::class);
+
+
+
+
+

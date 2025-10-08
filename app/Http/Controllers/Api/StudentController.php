@@ -11,7 +11,7 @@ class StudentController extends Controller
 {
      public function index()
     {
-     $students = Student::all();
+     $students = Student::paginate(5);
 
      if($students->count()>0){
          return response()->json([
