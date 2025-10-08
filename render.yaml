@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: student-api-crud
+    env: php
+    buildCommand: ""
+    startCommand: ""
+    envVars:
+      - key: APP_ENV
+        value: production
