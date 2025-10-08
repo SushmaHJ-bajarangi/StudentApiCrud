@@ -1,9 +1,10 @@
 services:
   - type: web
     name: student-api-crud
-    env: php
-    buildCommand: ""
-    startCommand: ""
+    runtime: php
+    buildCommand: |
+      composer install --no-dev --optimize-autoloader
+    startCommand: php artisan serve --host 0.0.0.0 --port $PORT
     envVars:
       - key: APP_ENV
         value: production
